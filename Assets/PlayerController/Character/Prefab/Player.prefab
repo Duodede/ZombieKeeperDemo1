@@ -110,6 +110,68 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Name
+--- !u!1 &3896827478373823197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521587340219660212}
+  - component: {fileID: 3593203066781333210}
+  m_Layer: 0
+  m_Name: Water Sphere Deformer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &521587340219660212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896827478373823197}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: 0, y: 0.873, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6302916366494733416}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &3593203066781333210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896827478373823197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78cf48dc57241ca4180a616b92b5d9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amplitude: 0.2
+  regionSize: {x: 2, y: 2}
+  scaleMode: 1
+  boxBlend: {x: 0, y: 0}
+  cubicBlend: 1
+  waveLength: 3
+  waveRepetition: 10
+  waveSpeed: 15
+  waveOffset: 0
+  waveBlend: {x: 0.3, y: 0.6}
+  breakingRange: {x: 0.7, y: 0.8}
+  deepFoamRange: {x: 0.5, y: 0.8}
+  bowWaveElevation: -0.1
+  range: {x: 0, y: 1}
+  texture: {fileID: 0}
+  deepFoamDimmer: 1
+  surfaceFoamDimmer: 1
 --- !u!1 &3963784499761731646
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +221,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -225,6 +289,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6302916366494733416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7650972785001395255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994072386428126169}
+  - component: {fileID: 4532125110649949665}
+  m_Layer: 0
+  m_Name: Water Foam Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1994072386428126169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650972785001395255}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5533605, z: 0}
+  m_LocalScale: {x: 0.58281, y: 2.23, z: 0.58281}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6302916366494733416}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4532125110649949665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650972785001395255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0050ecd2d32680645848edd91f37442d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  regionSize: {x: 0.9999991, y: 0.9999991}
+  texture: {fileID: 0}
+  surfaceFoamDimmer: 1
+  deepFoamDimmer: 1
+  scaleMode: 1
 --- !u!1 &7772502681451719166
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +544,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6980642844322301893}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b26ee860901497a46a0488e069a4145e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 521587340219660212}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b26ee860901497a46a0488e069a4145e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994072386428126169}
     - targetCorrespondingSourceObject: {fileID: -3321919801592875672, guid: b26ee860901497a46a0488e069a4145e,
         type: 3}
       insertIndex: -1
@@ -443,6 +565,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7252937063115597755}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b26ee860901497a46a0488e069a4145e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3166464164030562810}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b26ee860901497a46a0488e069a4145e,
         type: 3}
       insertIndex: -1
@@ -534,6 +660,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPositionSign: {fileID: 3963784499761731646}
+--- !u!114 &3166464164030562810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643836008143670994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada84ed19d931464aa9f8de40ee674e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 0}
+  controller: {fileID: 0}
+  waterDeformer: {fileID: 3593203066781333210}
+  isPlayer: 1
+  standardAmplitude: 0.1
 --- !u!114 &7875829094518704413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,11 +808,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: b557cc62-c864-4cdd-9457-b9e4c956e82b
-    m_ActionName: PlayerBasicController/PlayerMove[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+    m_ActionName: 'PlayerBasicController/PlayerMove[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 1dd7d765-5153-42cc-b4fc-d7822a04f536
-    m_ActionName: PlayerBasicController/Look[/Mouse/delta]
+    m_ActionName: 'PlayerBasicController/Look[/Mouse/delta]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5981745708495725787}
@@ -685,7 +828,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: b3615685-85b9-4bd1-a8dd-8260483cb3a7
-    m_ActionName: PlayerBasicController/Run[/Keyboard/leftShift]
+    m_ActionName: 'PlayerBasicController/Run[/Keyboard/leftShift]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5981745708495725787}
@@ -701,7 +844,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 60c9f5be-dcfa-46b6-9d6f-4b26bccd6f68
-    m_ActionName: PlayerBasicController/Crouch[/Keyboard/leftCtrl]
+    m_ActionName: 'PlayerBasicController/Crouch[/Keyboard/leftCtrl]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5981745708495725787}
@@ -717,7 +860,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: a377cd26-b3eb-47d6-baf5-b3753b9e7015
-    m_ActionName: PlayerBasicController/Jump[/Keyboard/space]
+    m_ActionName: 'PlayerBasicController/Jump[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4240147559013717922}
@@ -733,7 +876,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: c90fad2b-32fa-43a1-b630-5f865dd992ee
-    m_ActionName: PlayerBasicController/ChangeControllerMode[/Keyboard/v]
+    m_ActionName: 'PlayerBasicController/ChangeControllerMode[/Keyboard/v]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5981745708495725787}
@@ -749,7 +892,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 9ff111f2-3dd4-4dd9-98da-e718056ab007
-    m_ActionName: PlayerBasicController/Type[/Keyboard/t]
+    m_ActionName: 'PlayerBasicController/Type[/Keyboard/t]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5981745708495725787}
@@ -765,7 +908,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: a5d6fbdb-d78f-487b-9697-d1b2d5bd2d48
-    m_ActionName: PlayerBasicController/Enter[/Keyboard/enter]
+    m_ActionName: 'PlayerBasicController/Enter[/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4240147559013717922}
@@ -781,7 +924,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: befb27e2-76fd-4c8a-a9fb-ae94075c9342
-    m_ActionName: PlayerBasicController/FocusOn[/Keyboard/b]
+    m_ActionName: 'PlayerBasicController/FocusOn[/Keyboard/b]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: "\u952E\u76D8\u548C\u9F20\u6807\u8F93\u5165"
   m_DefaultActionMap: PlayerBasicController
